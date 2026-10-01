@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторна робота №1</title>
+</head>
+
+<body>
+
+<h1>Бібліотека</h1>
+
+<p>Предметна область: бібліотека.</p>
+
+<button onclick="showTable('books')">Книги</button>
+<button onclick="showTable('readers')">Читачі</button>
+<button onclick="showTable('workers')">Працівники</button>
+
+<hr>
+
+
+<!-- ТАБЛИЦЯ КНИГ -->
+
+<div id="books">
+
+    <h2>Книги</h2>
+
+    <table border="1">
+        <tr>
+            <th>Назва</th>
+            <th>Автор</th>
+            <th>Рік</th>
+            <th>Жанр</th>
+            <th>Кількість сторінок</th>
+            <th>Видавництво</th>
+        </tr>
+
+        <tr>
+            <td>Кобзар</td>
+            <td>Тарас Шевченко</td>
+            <td>1840</td>
+            <td>Поезія</td>
+            <td>350</td>
+            <td>Веселка</td>
+        </tr>
+
+        <tr>
+            <td>Лісова пісня</td>
+            <td>Леся Українка</td>
+            <td>1911</td>
+            <td>Драма</td>
+            <td>160</td>
+            <td>Фоліо</td>
+        </tr>
+    </table>
+
+</div>
+
+
+<!-- ТАБЛИЦЯ ЧИТАЧІВ -->
+
+<div id="readers" style="display: none;">
+
+    <h2>Читачі</h2>
+
+    <table border="1">
+        <tr>
+            <th>ПІБ</th>
+            <th>Вік</th>
+            <th>Телефон</th>
+            <th>Email</th>
+            <th>Номер квитка</th>
+            <th>Дата реєстрації</th>
+        </tr>
+
+        <tr>
+            <td>Іваненко Іван</td>
+            <td>20</td>
+            <td>0501112233</td>
+            <td>ivan@gmail.com</td>
+            <td>101</td>
+            <td>01.09.2026</td>
+        </tr>
+
+        <tr>
+            <td>Петренко Олена</td>
+            <td>22</td>
+            <td>0672223344</td>
+            <td>olena@gmail.com</td>
+            <td>102</td>
+            <td>05.09.2026</td>
+        </tr>
+    </table>
+
+</div>
+
+
+<!-- ТАБЛИЦЯ ПРАЦІВНИКІВ -->
+
+<div id="workers" style="display: none;">
+
+    <h2>Працівники</h2>
+
+    <table border="1">
+        <tr>
+            <th>ПІБ</th>
+            <th>Посада</th>
+            <th>Вік</th>
+            <th>Телефон</th>
+            <th>Стаж</th>
+            <th>Зарплата</th>
+        </tr>
+
+        <tr>
+            <td>Коваленко Марія</td>
+            <td>Бібліотекар</td>
+            <td>35</td>
+            <td>0951112233</td>
+            <td>10 років</td>
+            <td>18000 грн</td>
+        </tr>
+
+        <tr>
+            <td>Сидоренко Петро</td>
+            <td>Адміністратор</td>
+            <td>40</td>
+            <td>0632223344</td>
+            <td>12 років</td>
+            <td>22000 грн</td>
+        </tr>
+    </table>
+
+</div>
+
+
+<script>
+
+function showTable(tableName) {
+
+    document.getElementById("books").style.display = "none";
+    document.getElementById("readers").style.display = "none";
+    document.getElementById("workers").style.display = "none";
+
+    document.getElementById(tableName).style.display = "block";
+}
+
+</script>
+
+</body>
+</html>
